@@ -90,7 +90,8 @@ public class Hostel {
                 break;
             }
         }
-        if (hostelToRemove != null) {
+        if (hostelToRemove != null)
+        {
             hostelList.remove(hostelToRemove);
         }
     }
