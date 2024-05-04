@@ -1,26 +1,20 @@
+import java.util.Scanner;
 public class Expense
 {
-    private double totalExpenses;
-    private int expenseID;
+    protected static double totalExpenses;
+    protected static double expnesesPaid;
+    protected static double expensesPending;
+    private int expenseID ;
     private String expenseType;
     private double expenseAmount;
-
-    public Expense(double totalExpenses, int expenseID, String expenseType, double expenseAmount)
+    public Expense(int expenseID, String expenseType, double expenseAmount )
     {
+        totalExpenses = calExpectedExpense();
+        expnesesPaid = calExpensePaid();
+        expensesPending = calExpensesPending();
         setExpenseID(expenseID);
         setExpenseAmount(expenseAmount);
         setExpenseType(expenseType);
-        setTotalExpenses(totalExpenses);
-    }
-
-    public double getTotalExpenses()
-    {
-        return totalExpenses;
-    }
-
-    public void setTotalExpenses(double totalExpenses)
-    {
-        this.totalExpenses = totalExpenses;
     }
 
     public int getExpenseID()
@@ -43,13 +37,52 @@ public class Expense
         this.expenseType = expenseType;
     }
 
-    public double getExpenseAmount()
-    {
+    public double getExpenseAmount() {
         return expenseAmount;
     }
 
-    public void setExpenseAmount(double expenseAmount)
-    {
+    public void setExpenseAmount(double expenseAmount) {
         this.expenseAmount = expenseAmount;
     }
+
+    public double getTotalExpenses()
+    {
+        return totalExpenses;
+    }
+
+    public void setTotalExpenses(double totalExpenses)
+    {
+        this.totalExpenses = totalExpenses;
+    }
+    private static double calExpectedExpense()
+    {
+        for (Employee employee: MethodsEmployee.employees)
+        {
+            totalExpenses += employee.getEmployeePosition().getSalary();
+        }
+        return totalExpenses;
+    }
+    private static double calExpensesPending()
+    {
+        for (Employee employee: MethodsEmployee.employees)
+        {
+            if(employee.getPayStatus().equals(PayStatus.pending))
+            {
+                expensesPending += employee.getPayInfo().getPayPending();
+            }
+        }
+        return expensesPending;
+    }
+    private static double calExpensePaid()
+    {
+        for (Employee employee: MethodsEmployee.employees)
+        {
+            if(employee.getPayInfo().getPayPaid() != 0 )
+            {
+                expnesesPaid += employee.getPayInfo().getPayPaid();
+            }
+        }
+        return expnesesPaid;
+    }
+
 }

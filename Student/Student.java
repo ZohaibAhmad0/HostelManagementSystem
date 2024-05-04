@@ -1,11 +1,10 @@
-public class Student extends BasicCredentials {
+public class Student extends BasicCredentials
+{
     private int studentID;
     private int roomNo;
     private RentInfo rentInfo ;
     private RentStatus rentStatus ;
     private RoomType roomType;
-
-
     public Student(String CNIC, String firstName, String lastName, AddressInfo address, int studentID, int roomNo, RoomType roomType)
     {
         super(CNIC, firstName, lastName, address);
@@ -14,7 +13,6 @@ public class Student extends BasicCredentials {
         this.roomType = roomType;
         this.rentStatus = RentStatus.pending;
         rentInfo.setRentPending(roomType.getRent());
-
     }
 
     public RentInfo getRentInfo()
@@ -117,7 +115,8 @@ public class Student extends BasicCredentials {
         private double rentPaid;
         private double rentPending;
 
-        public RentInfo() {
+        public RentInfo()
+        {
             this.rentPaid = 0.0;
             this.rentPending = 0.0;
         }

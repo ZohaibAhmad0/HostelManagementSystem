@@ -1,33 +1,102 @@
-import java.util.ArrayList;
-import java.util.List;
+public class Employee extends BasicCredentials
 
-public class Employee extends BasicCredentials {
-    private static List<Employee> employees = new ArrayList<>();
-    private String position;
+{
+    private int employeeID = 0;
+    private EmployeePosition employeePosition;
+    private PayStatus payStatus;
+    private PayInfo payInfo;
 
-    public Employee(String CNIC, String firstName, String lastName, AddressInfo address, String position) {
+    public Employee(String CNIC, String firstName, String lastName, AddressInfo address, EmployeePosition employeePosition)
+    {
         super(CNIC, firstName, lastName, address);
-        //this.position = position;
-        setPosition(position);
+        this.employeePosition = employeePosition;
+        this.payStatus = PayStatus.pending;
+        payInfo.setPayPending(employeePosition.getSalary());
+
     }
 
-    public String getPosition() {
-        return position;
+    public int getEmployeeID()
+    {
+        return employeeID;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setEmployeeID(int employeeID)
+    {
+        this.employeeID = employeeID;
     }
 
-    public static void addEmployee(Employee employee) {
-        employees.add(employee);
+    public EmployeePosition getEmployeePosition()
+    {
+        return employeePosition;
     }
 
-    public static void deleteEmployee(Employee employee) {
-        employees.remove(employee);
+    public void setEmployeePosition(EmployeePosition employeePosition)
+    {
+        this.employeePosition = employeePosition;
     }
 
-    public static List<Employee> getEmployees() {
-        return employees;
+    public PayStatus getPayStatus()
+    {
+        return payStatus;
+    }
+
+    public void setPayStatus(PayStatus payStatus)
+    {
+        this.payStatus = payStatus;
+    }
+
+    public PayInfo getPayInfo()
+    {
+        return payInfo;
+    }
+
+    public void setPayInfo(PayInfo payInfo)
+    {
+        this.payInfo = payInfo;
+    }
+    public void paySalaryOnline(double amount)
+    {
+        payInfo.setPayPaid(payInfo.getPayPaid() + amount);
+        payInfo.setPayPending(payInfo.getPayPending() - amount);
+        System.out.println("Salary paid successfully by online.");
+        if(payInfo.getPayPending()== 0.0)
+        {
+            this.payStatus = PayStatus.paid;
+        }
+    }
+
+    public void paySalaryCash(double amount)
+    {
+        payInfo.setPayPaid(payInfo.getPayPaid() + amount);
+        payInfo.setPayPending(payInfo.getPayPending() - amount);
+        System.out.println("Salary paid successfully by cash.");
+        if(payInfo.getPayPending()== 0.0)
+        {
+            this.payStatus = PayStatus.paid;
+        }
+    }
+
+    public void updateSalaryInfo(double salaryPaid, double salaryPending)
+    {
+        payInfo.setPayPaid(salaryPaid);
+        payInfo.setPayPending(salaryPending);
+    }
+
+    public void displayPayInfo()
+    {
+        System.out.println("Salary Paid: " + payInfo.getPayPaid());
+        System.out.println("Salary Pending: " + payInfo.getPayPending());
+    }
+
+    public void checkPayStatus()
+    {
+        if (payStatus == PayStatus.paid)
+        {
+            System.out.println("No pending Salary.");
+        }
+        else
+        {
+            System.out.println("Pending Salary: " + payInfo.getPayPending());
+        }
     }
 }
