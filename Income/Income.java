@@ -1,43 +1,44 @@
-public class Income
-{
-    private double totalExpectedIncome;
-    private double totalRentReceived;
-    private double totalrentPending;
+public class Income {
+    private Double totalExpectedIncome;
+    private Double totalRentReceived;
+    private Double totalRentPending;
 
-    public Income(double totalExpectedIncome, double totalRentReceived, double totalrentPending)
-    {
-       setTotalExpectedIncome(totalExpectedIncome);
-       setTotalrentPending(totalrentPending);
-       setTotalRentReceived(totalRentReceived);
+    public Income(Double totalExpectedIncome, Double totalRentReceived, Double totalRentPending) {
+        setTotalExpectedIncome(totalExpectedIncome);
+        setTotalRentReceived(totalRentReceived);
+        setTotalRentPending(totalRentPending);
     }
 
-    public double getTotalExpectedIncome()
-    {
+    public Double getTotalExpectedIncome() {
         return totalExpectedIncome;
     }
 
-    public void setTotalExpectedIncome(double totalExpectedIncome)
-    {
+    public void setTotalExpectedIncome(Double totalExpectedIncome) {
+        if (totalExpectedIncome == null) {
+            throw new IllegalArgumentException("Error: Total expected income cannot be null.");
+        }
         this.totalExpectedIncome = totalExpectedIncome;
     }
 
-    public double getTotalRentReceived()
-    {
+    public Double getTotalRentReceived() {
         return totalRentReceived;
     }
 
-    public void setTotalRentReceived(double totalRentReceived)
-    {
+    public void setTotalRentReceived(Double totalRentReceived) {
+        if (totalRentReceived == null) {
+            throw new IllegalArgumentException("Error: Total rent received cannot be null.");
+        }
         this.totalRentReceived = totalRentReceived;
     }
 
-    public double getTotalrentPending()
-    {
-        return totalrentPending;
+    public Double getTotalRentPending() {
+        return totalRentPending;
     }
 
-    public void setTotalrentPending(double totalrentPending)
-    {
-        this.totalrentPending = totalrentPending;
+    public void setTotalRentPending(Double totalRentPending) {
+        if (totalRentPending == null) {
+            throw new IllegalArgumentException("Error: Total rent pending cannot be null.");
+        }
+        this.totalRentPending = totalRentPending;
     }
 }
