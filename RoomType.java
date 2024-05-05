@@ -1,6 +1,6 @@
 enum  RoomType
 {
-    SingleSharing(20000), DoubleSharing(15000);
+    SingleSharing(20000), DoubleSharing(15000), Null(0);
     private int rent;
 
     private RoomType(int rent)

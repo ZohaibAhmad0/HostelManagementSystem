@@ -4,7 +4,7 @@ public class Employee extends BasicCredentials
     private int employeeID = 0;
     private EmployeePosition employeePosition;
     private PayStatus payStatus;
-    private PayInfo payInfo;
+    private PayInfo payInfo = new PayInfo();
 
     public Employee(String CNIC, String firstName, String lastName, AddressInfo address, EmployeePosition employeePosition)
     {
@@ -12,7 +12,6 @@ public class Employee extends BasicCredentials
         this.employeePosition = employeePosition;
         this.payStatus = PayStatus.pending;
         payInfo.setPayPending(employeePosition.getSalary());
-
     }
 
     public int getEmployeeID()

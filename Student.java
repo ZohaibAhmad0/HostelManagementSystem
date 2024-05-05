@@ -2,7 +2,7 @@ public class Student extends BasicCredentials
 {
     private int studentID;
     private int roomNo;
-    private RentInfo rentInfo ;
+    private RentInfo rentInfo = new RentInfo() ;
     private RentStatus rentStatus ;
     private RoomType roomType;
     public Student(String CNIC, String firstName, String lastName, AddressInfo address, int studentID, int roomNo, RoomType roomType)

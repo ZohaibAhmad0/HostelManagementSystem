@@ -3,18 +3,17 @@ import java.util.Scanner;
 
 public class MethodsStudents
 {
-    Scanner input = new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
     static ArrayList<Student> students = new ArrayList<>();
 
-    public void addStudent()
+    public static void addStudent()
     {
         String cnic;
         String fName;
         String lName;
         int studentID;
         int roomNo;
-        RentStatus rentStatus = RentStatus.pending;
-        RoomType roomType = null;
+        RoomType roomType = RoomType.Null;
 
         int roomtype;
         int streetNumber;
@@ -31,44 +30,49 @@ public class MethodsStudents
         System.out.print("Enter Student First Name: ");
         fName = input.nextLine();
         fName = fName.toUpperCase();
-        System.out.print("Enter Student First Name: ");
+        System.out.print("Enter Student Last Name: ");
         lName = input.nextLine();
         lName = lName.toUpperCase();
-        System.out.println("Enter Student Room Type. ");
-        System.out.println("Press 1 for Single Sharing.");
-        System.out.println("Enter 2 for Double Sharing. ");
-        roomtype = input.nextInt();
-        if (roomtype == 1)
-        {
-            roomType = RoomType.SingleSharing;
-        }
-        else if (roomtype == 2)
-        {
-            roomType = RoomType.DoubleSharing;
-        }
+        do {
+            System.out.println("Enter Student Room Type. ");
+            System.out.println("Press 1 for Single Sharing.");
+            System.out.println("Enter 2 for Double Sharing. ");
+            roomtype = input.nextInt();
+            if (roomtype == 1)
+            {
+                roomType = RoomType.SingleSharing;
+            }
+            else if (roomtype == 2)
+            {
+                roomType = RoomType.DoubleSharing;
+            }
+            else
+            {
+                System.out.println("Invalid Choice! Please Re-Enter.");
+            }
+        }while (roomtype != 1 && roomtype != 2);
         System.out.print("Enter Student Room Number: ");
         roomNo = input.nextInt();
-
         System.out.println("Enter Student Address");
-
+        input.nextLine();
         System.out.print("Enter Student Country: ");
-        country = input.nextLine();
+        country = input.nextLine().toUpperCase();
         System.out.print("Enter Student City: ");
-        city = input.nextLine();
+        city = input.nextLine().toUpperCase();
         System.out.print("Enter Student Area: ");
-        area = input.nextLine();
-        System.out.println("Enter Student Street Number: ");
+        area = input.nextLine().toUpperCase();
+        System.out.print("Enter Student Street Number: ");
         streetNumber = input.nextInt();
 
         System.out.println("Enter Student Contact Information");
 
-        System.out.println("Enter Student Country Code: ");
+        System.out.print("Enter Student Country Code: ");
         countryCode = input.nextInt();
+        input.nextLine();
         System.out.print("Enter Student Line Number: ");
-        lineNumber = input.nextLine();
+        lineNumber = input.nextLine().toUpperCase();
         System.out.print("Enter Student email: ");
-        email = input.nextLine();
-
+        email = input.nextLine().toUpperCase();
         ContactInfo contact = new ContactInfo(countryCode, lineNumber, email);
         AddressInfo address = new AddressInfo(streetNumber, area, city, country, contact);
         Student student = new Student(cnic, fName, lName, address, studentID, roomNo, roomType);
@@ -77,20 +81,22 @@ public class MethodsStudents
 
     }
 
-    public void removeStudent()
+    public static void removeStudent()
     {
         String fName;
         System.out.print("Enter first Name of the Student you want to remove: ");
-        fName = input.nextLine();
+        fName = input.nextLine().toUpperCase();
         fName = fName.toUpperCase();
-        for (Student student : students) {
-            if (student.getFirstName().equals(fName)) {
-                students.remove(students.indexOf(student));
+        for (Student student : students)
+        {
+            if (student.getFirstName().equals(fName))
+            {
+                students.remove(student);
             }
         }
     }
 
-    public void searchStudent()
+    public static void searchStudent()
     {
         String fName;
         int menu;
@@ -101,15 +107,15 @@ public class MethodsStudents
         {
             if (student.getFirstName().equals(fName))
             {
-                System.out.println("Press 1 to Display Credentials.");
-                System.out.println("Press 2 to Pay Rent by Online Payment.");
-                System.out.println("Press 3 to Pay Rent by Cash Payment.");
-                System.out.println("Press 4 to Update Student Entities.");
-
-                menu = input.nextInt();
-                switch (menu)
+                do
                 {
-                    case 1:
+                    System.out.println("Press 1 to Display Credentials.");
+                    System.out.println("Press 2 to Pay Rent by Online Payment.");
+                    System.out.println("Press 3 to Pay Rent by Cash Payment.");
+                    System.out.println("Press 4 to Update Student Entities.");
+                    System.out.print("Enter Your Choice: ");
+                    menu = input.nextInt();
+                    if (menu == 1)
                     {
 
                         System.out.println("Student ID: " + student.getStudentID());
@@ -129,7 +135,7 @@ public class MethodsStudents
                         System.out.println("Student Rent Status: " + student.getRentStatus());
                         break;
                     }
-                    case 2:
+                    else if (menu == 2)
                     {
                         double amount;
                         System.out.print("Enter Amount: ");
@@ -138,7 +144,7 @@ public class MethodsStudents
                         System.out.println("Your Pending Rent is " + student.getRentInfo().getRentPending());
                         break;
                     }
-                    case 3:
+                    else if (menu == 3)
                     {
 
                         double amount;
@@ -148,42 +154,63 @@ public class MethodsStudents
                         System.out.println("Your Pending Rent is " + student.getRentInfo().getRentPending());
                         break;
                     }
-                    case 4:
+                    else if (menu == 4)
                     {
                         int menu2, menu3;
-                        System.out.println("Press 1 to Upgrade Student Room Type.");
-                        System.out.println("Press 2 to Change Room Number.");
-                        menu2 = input.nextInt();
-                        if(menu2 == 1)
+                        do
                         {
+                            System.out.println("Press 1 to Upgrade Student Room Type.");
+                            System.out.println("Press 2 to Change Room Number.");
+                            System.out.print("Enter Your Choice: ");
+                            menu2 = input.nextInt();
+                            if (menu2 == 1)
+                            {
+                                do
+                                {
+                                    System.out.println("Press 1 to Upgrade to Single Sharing.");
+                                    System.out.println("Press 2 to Degrade to Double Sharing.");
+                                    menu3 = input.nextInt();
+                                    if (menu3 == 1)
+                                    {
+                                        student.setRoomType(RoomType.SingleSharing);
+                                        System.out.println("Room Type successfully changed to Single Sharing.");
+                                    }
+                                    else if (menu3 == 2)
+                                    {
+                                        student.setRoomType(RoomType.DoubleSharing);
+                                        System.out.println("Room Type successfully changed to Double Sharing.");
+                                    }
+                                    else
+                                    {
+                                        System.out.println("Invalid Choice! Please Re-Enter.");
+                                    }
 
-                            System.out.println("Press 1 to Upgrade to Single Sharing.");
-                            System.out.println("Press 2 to Degrade to Double Sharing.");
-                            menu3 = input.nextInt();
-                            if(menu3 == 1)
-                            {
-                                student.setRoomType(RoomType.SingleSharing);
-                                System.out.println("Room Type successfully changed to Single Sharing.");
+                                }while(menu3 != 1 && menu3 != 2);
                             }
-                            else if (menu3 == 2)
+                            else if (menu2 == 2)
                             {
-                                student.setRoomType(RoomType.DoubleSharing);
-                                System.out.println("Room Type successfully changed to Double Sharing.");
+                                int roomNo;
+                                System.out.print("Student's Current Room Number is " + student.getRoomNo() + ".");
+                                System.out.print("Enter Student's New Room Number :");
+                                roomNo = input.nextInt();
+                                student.setRoomNo(roomNo);
+                                System.out.println("Room Number Changed Successfully.");
                             }
-                        }
-                        if(menu2 == 2)
-                        {
-                            int roomNo;
-                            System.out.print("Student's Current Room Number is " + student.getRoomNo() + ".");
-                            System.out.print("Enter Student's New Room Number :");
-                            roomNo = input.nextInt();
-                            student.setRoomNo(roomNo);
-                            System.out.println("Room Number Changed Successfully.");
-                        }
+                            else
+                            {
+                                System.out.println("Invalid Choice! Please Re-Enter.");
+                            }
+                        }while(menu2 != 1 && menu2 != 2);
                         break;
                     }
-                }
+                    else
+                    {
+                        System.out.println("Invalid Choice! Please Re-Enter.");
+                    }
+                } while(true);
+
             }
+            break;
         }
 
     }
@@ -209,7 +236,7 @@ public class MethodsStudents
             System.out.println();
         }
     }
-     public void displayDefaulters()
+     public static void displayDefaulters()
      {
          for(Student student: students)
          {

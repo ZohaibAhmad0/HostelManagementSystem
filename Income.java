@@ -72,5 +72,17 @@ public class Income
         }
         return totalRentReceived;
     }
+    public static void displayExpectedIncome()
+    {
+        System.out.println("Total Expected Income: " + totalExpectedIncome);
+    }
+    public static void displayRentPending()
+    {
+        System.out.println("Total Rent Pending: " + totalrentPending);
+    }
+    public static void displayRentReceived()
+    {
+        System.out.println("Total Rent Paid: " + totalRentReceived);
+    }
 
 }
