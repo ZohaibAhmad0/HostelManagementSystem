@@ -5,7 +5,7 @@ public class Employee extends BasicCredentials {
     private static List<Employee> employees = new ArrayList<>();
     private String position;
 
-    public Employee(Integer CNIC, String firstName, String lastName, AddressInfo address, String position) {
+    public Employee(String CNIC, String firstName, String lastName, AddressInfo address, String position) {
         super(CNIC, firstName, lastName, address);
         //this.position = position;
         setPosition(position);
