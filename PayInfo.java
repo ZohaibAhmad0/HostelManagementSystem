@@ -1,31 +1,33 @@
-public class PayInfo
-{
-    private double payPaid;
-    private double payPending;
+public class PayInfo {
+    private Double payPaid;
+    private Double payPending;
 
-    public PayInfo()
-    {
+    public PayInfo() {
         this.payPaid = 0.0;
         this.payPending = 0.0;
     }
 
-    public double getPayPaid()
-    {
+    public Double getPayPaid() {
         return payPaid;
     }
 
-    public void setPayPaid(double payPaid)
-    {
+    public void setPayPaid(Double payPaid) {
+
+        if (payPaid == null || payPaid < 0) {
+            throw new IllegalArgumentException("Error: PayPaid must be a non-negative number.");
+        }
         this.payPaid = payPaid;
     }
 
-    public double getPayPending()
-    {
+    public Double getPayPending() {
         return payPending;
     }
 
-    public void setPayPending(double payPending)
-    {
+    public void setPayPending(Double payPending) {
+
+        if (payPending == null || payPending < 0) {
+            throw new IllegalArgumentException("Error: PayPending must be a non-negative number.");
+        }
         this.payPending = payPending;
     }
 }
