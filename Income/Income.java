@@ -14,12 +14,10 @@ public class Income {
     }
 
     public void setTotalExpectedIncome(Double totalExpectedIncome) {
-
-        if (totalExpectedIncome != null && totalExpectedIncome instanceof Number) {
-            this.totalExpectedIncome = totalExpectedIncome;
-        } else {
-            throw new IllegalArgumentException("Error: Total expected income must be a number");
+        if (totalExpectedIncome == null) {
+            throw new IllegalArgumentException("Error: Total expected income cannot be null.");
         }
+        this.totalExpectedIncome = totalExpectedIncome;
     }
 
     public Double getTotalRentReceived() {
@@ -27,12 +25,10 @@ public class Income {
     }
 
     public void setTotalRentReceived(Double totalRentReceived) {
-
-        if (totalRentReceived != null && totalRentReceived instanceof Number) {
-            this.totalRentReceived = totalRentReceived;
-        } else {
-            throw new IllegalArgumentException("Error: Total rent received must be a number");
+        if (totalRentReceived == null) {
+            throw new IllegalArgumentException("Error: Total rent received cannot be null.");
         }
+        this.totalRentReceived = totalRentReceived;
     }
 
     public Double getTotalRentPending() {
@@ -40,11 +36,9 @@ public class Income {
     }
 
     public void setTotalRentPending(Double totalRentPending) {
-
-        if (totalRentPending != null && totalRentPending instanceof Number) {
-            this.totalRentPending = totalRentPending;
-        } else {
-            throw new IllegalArgumentException("Error: Total rent pending must be a number");
+        if (totalRentPending == null) {
+            throw new IllegalArgumentException("Error: Total rent pending cannot be null.");
         }
+        this.totalRentPending = totalRentPending;
     }
 }
