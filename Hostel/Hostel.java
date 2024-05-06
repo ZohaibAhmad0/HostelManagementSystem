@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Hostel {
     private int branchID;
@@ -6,6 +8,8 @@ public class Hostel {
     private double expenses;
     private double income;
     private String location;
+
+    private static List<Hostel> hostelList = new ArrayList<>();
 
     public Hostel(int branchID, String manager, double rent, double expenses, double income, String location) {
         this.branchID = branchID;
@@ -72,5 +76,36 @@ public class Hostel {
         System.out.println("Rent: " + rent);
         System.out.println("Expenses: " + expenses);
         System.out.println("Income: " + income);
+    }
+
+    public static void addHostel(Hostel hostel) {
+        hostelList.add(hostel);
+    }
+
+    public static void removeHostel(int branchID) {
+        Hostel hostelToRemove = null;
+        for (Hostel hostel : hostelList) {
+            if (hostel.getBranchID() == branchID) {
+                hostelToRemove = hostel;
+                break;
+            }
+        }
+        if (hostelToRemove != null)
+        {
+            hostelList.remove(hostelToRemove);
+        }
+    }
+
+    public static void updateHostel(int branchID, String manager, double rent, double expenses, double income, String location) {
+        for (Hostel hostel : hostelList) {
+            if (hostel.getBranchID() == branchID) {
+                hostel.setManager(manager);
+                hostel.setRent(rent);
+                hostel.setExpenses(expenses);
+                hostel.setIncome(income);
+                hostel.setLocation(location);
+                break;
+            }
+        }
     }
 }
