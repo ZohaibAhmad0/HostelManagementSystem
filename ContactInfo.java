@@ -9,19 +9,19 @@ public class ContactInfo
         setLineNumber(lineNumber);
         setEmail(email);
     }
-    public int getCountryCode() 
+    public int getCountryCode()
     {
         return countryCode;
     }
-    public void setCountryCode(int countryCode) 
+    public void setCountryCode(int countryCode)
     {
         this.countryCode = countryCode;
     }
-    public String getLineNumber() 
+    public String getLineNumber()
     {
         return lineNumber;
     }
-    public void setLineNumber(String lineNumber) 
+    public void setLineNumber(String lineNumber)
     {
         this.lineNumber = lineNumber;
     }

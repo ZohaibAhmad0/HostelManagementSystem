@@ -13,11 +13,11 @@ public class AddressInfo
         setArea(Area);
         setstreetNumber(streetNumber);
     }
-    public String getCity() 
+    public String getCity()
     {
         return city;
-    }    
-    public void setCity(String city) 
+    }
+    public void setCity(String city)
     {
         this.city = city;
     }
@@ -29,11 +29,11 @@ public class AddressInfo
     {
         this.streetNumber = streetNumber ;
     }
-    public String getCountry() 
+    public String getCountry()
     {
         return country;
     }
-    public void setCountry(String country) 
+    public void setCountry(String country)
     {
         this.country = country;
     }
@@ -53,5 +53,5 @@ public class AddressInfo
     {
         this.contactInfo = contactInfo;
     }
-   
+
 }
