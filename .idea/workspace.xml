@@ -5,55 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0f3e44a-d10f-47f2-b597-9553f6d7ff3a" name="Changes" comment="Old code">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmployeePosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Expense.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hostel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HostelManagementSystem.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Income.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MethodsEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MethodsExpense.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MethodsHostels.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MethodsStudents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PayInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PayStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RentStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RoomType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/AddressInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/BasicCredentials.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/ContactInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/Employee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/EmployeePosition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/Expense.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/Feedback.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/Hostel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/HostelManagementSystem.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/Income.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/MethodsEmployee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/MethodsExpense.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/MethodsHostels.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/MethodsStudents.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/PayInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/PayStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/RentStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/RoomType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/Student$RentInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/HostelManagementSystem/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BasicCredentials/AddressInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/AddressInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BasicCredentials/BasicCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/BasicCredentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BasicCredentials/ContactInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/ContactInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employee/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Expense/Expense.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Feedback/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/Feedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Income/Income.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AddressInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/AddressInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/BasicCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/ContactInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmployeePosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/EmployeePosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/Expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hostel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hostel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Income.java" beforeDir="false" afterPath="$PROJECT_DIR$/Income.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MethodsEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/MethodsEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MethodsExpense.java" beforeDir="false" afterPath="$PROJECT_DIR$/MethodsExpense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MethodsStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/MethodsStudents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PayInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/PayInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714973421415</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Old code">
+      <option name="closed" value="true" />
+      <created>1714974323849</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714974323855</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

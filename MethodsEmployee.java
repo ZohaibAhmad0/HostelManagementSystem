@@ -108,14 +108,14 @@ public class MethodsEmployee
                         System.out.println("Employee Position: " + employee.getEmployeePosition());
                         System.out.println("Employee Salary: " + employee.getEmployeePosition().getSalary());
                         System.out.println("Address Information:");
-                        System.out.println("Employee Country: " + employee.getAddressinfo().getCountry());
-                        System.out.println("Employee City: " + employee.getAddressinfo().getCity());
-                        System.out.println("Employee Area: " + employee.getAddressinfo().getArea());
-                        System.out.println("Employee Street Number: " + employee.getAddressinfo().getstreetNumber());
+                        System.out.println("Employee Country: " + employee.getAddressInfo().getCountry());
+                        System.out.println("Employee City: " + employee.getAddressInfo().getCity());
+                        System.out.println("Employee Area: " + employee.getAddressInfo().getArea());
+                        System.out.println("Employee Street Number: " + employee.getAddressInfo().getStreetNumber());
                         System.out.println("Contact Information:");
-                        System.out.println("Employee Country Code: " + employee.getAddressinfo().getContactInfo().getCountryCode());
-                        System.out.println("Employee LineNumber: " + employee.getAddressinfo().getContactInfo().getLineNumber());
-                        System.out.println("Employee Email: " + employee.getAddressinfo().getContactInfo().getEmail());
+                        System.out.println("Employee Country Code: " + employee.getAddressInfo().getContactInfo().getCountryCode());
+                        System.out.println("Employee LineNumber: " + employee.getAddressInfo().getContactInfo().getLineNumber());
+                        System.out.println("Employee Email: " + employee.getAddressInfo().getContactInfo().getEmail());
                         break;
                     }
                     else if (menu == 2)
@@ -191,14 +191,14 @@ public class MethodsEmployee
             System.out.println("Employee Position: " + employee.getEmployeePosition());
             System.out.println("Employee Salary: " + employee.getEmployeePosition().getSalary());
             System.out.println("Address Information:");
-            System.out.println("Employee Country: " + employee.getAddressinfo().getCountry());
-            System.out.println("Employee City: " + employee.getAddressinfo().getCity());
-            System.out.println("Employee Area: " + employee.getAddressinfo().getArea());
-            System.out.println("Employee Street Number: " + employee.getAddressinfo().getstreetNumber());
+            System.out.println("Employee Country: " + employee.getAddressInfo().getCountry());
+            System.out.println("Employee City: " + employee.getAddressInfo().getCity());
+            System.out.println("Employee Area: " + employee.getAddressInfo().getArea());
+            System.out.println("Employee Street Number: " + employee.getAddressInfo().getStreetNumber());
             System.out.println("Contact Information:");
-            System.out.println("Employee Country Code: " + employee.getAddressinfo().getContactInfo().getCountryCode());
-            System.out.println("Employee LineNumber: " + employee.getAddressinfo().getContactInfo().getLineNumber());
-            System.out.println("Employee Email: " + employee.getAddressinfo().getContactInfo().getEmail());
+            System.out.println("Employee Country Code: " + employee.getAddressInfo().getContactInfo().getCountryCode());
+            System.out.println("Employee LineNumber: " + employee.getAddressInfo().getContactInfo().getLineNumber());
+            System.out.println("Employee Email: " + employee.getAddressInfo().getContactInfo().getEmail());
             System.out.println();
         }
     }
@@ -211,8 +211,8 @@ public class MethodsEmployee
                 System.out.println();
                 System.out.println("Employee ID: " + employee.getEmployeeID());
                 System.out.println("Name: " + employee.getFirstName() + " " + employee.getLastName());
-                System.out.println("Phone Number: " + employee.getAddressinfo().getContactInfo().getCountryCode() + " " + employee.getAddressinfo().getContactInfo().getLineNumber());
-                System.out.println("Email: " + employee.getAddressinfo().getContactInfo().getEmail());
+                System.out.println("Phone Number: " + employee.getAddressInfo().getContactInfo().getCountryCode() + " " + employee.getAddressInfo().getContactInfo().getLineNumber());
+                System.out.println("Email: " + employee.getAddressInfo().getContactInfo().getEmail());
                 System.out.println("Salary Pending: " + employee.getPayInfo().getPayPending());
                 System.out.println("Salary Paid: " + employee.getPayInfo().getPayPaid());
                 System.out.println();

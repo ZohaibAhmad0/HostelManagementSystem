@@ -2,29 +2,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hostel {
-    private int branchID;
+    private Integer branchID;
     private String manager;
-    private double rent;
-    private double expenses;
-    private double income;
+    private Double rent;
+    private Double expenses;
+    private Double income;
     private String location;
 
     private static List<Hostel> hostelList = new ArrayList<>();
 
-    public Hostel(int branchID, String manager, double rent, double expenses, double income, String location) {
-        this.branchID = branchID;
-        this.manager = manager;
-        this.rent = rent;
-        this.expenses = expenses;
-        this.income = income;
-        this.location = location;
+    public Hostel(Integer branchID, String manager, Double rent, Double expenses, Double income, String location) {
+        setBranchID(branchID);
+        setManager(manager);
+        setRent(rent);
+        setExpenses(expenses);
+        setIncome(income);
+        setLocation(location);
     }
 
-    public int getBranchID() {
+    public Integer getBranchID() {
         return branchID;
     }
 
-    public void setBranchID(int branchID) {
+    public void setBranchID(Integer branchID) {
+
+        if (branchID == null || branchID < 0) {
+            throw new IllegalArgumentException("Error: Branch ID must be a non-negative number.");
+        }
         this.branchID = branchID;
     }
 
@@ -36,27 +40,39 @@ public class Hostel {
         this.manager = manager;
     }
 
-    public double getRent() {
+    public Double getRent() {
         return rent;
     }
 
-    public void setRent(double rent) {
+    public void setRent(Double rent) {
+
+        if (rent == null || rent < 0) {
+            throw new IllegalArgumentException("Error: Rent must be a non-negative number.");
+        }
         this.rent = rent;
     }
 
-    public double getExpenses() {
+    public Double getExpenses() {
         return expenses;
     }
 
-    public void setExpenses(double expenses) {
+    public void setExpenses(Double expenses) {
+
+        if (expenses == null || expenses < 0) {
+            throw new IllegalArgumentException("Error: Expenses must be a non-negative number.");
+        }
         this.expenses = expenses;
     }
 
-    public double getIncome() {
+    public Double getIncome() {
         return income;
     }
 
-    public void setIncome(double income) {
+    public void setIncome(Double income) {
+
+        if (income == null || income < 0) {
+            throw new IllegalArgumentException("Error: Income must be a non-negative number.");
+        }
         this.income = income;
     }
 
@@ -82,23 +98,22 @@ public class Hostel {
         hostelList.add(hostel);
     }
 
-    public static void removeHostel(int branchID) {
+    public static void removeHostel(Integer branchID) {
         Hostel hostelToRemove = null;
         for (Hostel hostel : hostelList) {
-            if (hostel.getBranchID() == branchID) {
+            if (hostel.getBranchID().equals(branchID)) {
                 hostelToRemove = hostel;
                 break;
             }
         }
-        if (hostelToRemove != null)
-        {
+        if (hostelToRemove != null) {
             hostelList.remove(hostelToRemove);
         }
     }
 
-    public static void updateHostel(int branchID, String manager, double rent, double expenses, double income, String location) {
+    public static void updateHostel(Integer branchID, String manager, Double rent, Double expenses, Double income, String location) {
         for (Hostel hostel : hostelList) {
-            if (hostel.getBranchID() == branchID) {
+            if (hostel.getBranchID().equals(branchID)) {
                 hostel.setManager(manager);
                 hostel.setRent(rent);
                 hostel.setExpenses(expenses);
