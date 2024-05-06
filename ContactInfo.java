@@ -19,7 +19,7 @@ public class ContactInfo {
             this.countryCode = countryCode;
         } else {
 
-            throw new IllegalArgumentException("Error: Country code should be a valid number");
+             throw new IllegalArgumentException("Error: Country code should be a valid number");
         }
     }
 
@@ -32,7 +32,7 @@ public class ContactInfo {
         if (lineNumber == null || lineNumber.matches("\\d+")) {
             this.lineNumber = lineNumber;
         } else {
-            throw new IllegalArgumentException("Error: Line number should contain only numbers");
+             throw new IllegalArgumentException("Error: Line number should contain only numbers");
         }
     }
 

@@ -43,7 +43,7 @@ public class AddressInfo {
         if (city.matches("[a-zA-Z]+")) {
             this.city = city;
         } else {
-            throw new IllegalArgumentException("Error: City name should contain only alphabets");
+             throw new IllegalArgumentException("Error: City name should contain only alphabets");
         }
     }
 
@@ -56,7 +56,7 @@ public class AddressInfo {
         if (country.matches("[a-zA-Z]+")) {
             this.country = country;
         } else {
-            throw new IllegalArgumentException("Error: Country name should contain only alphabets");
+             throw new IllegalArgumentException("Error: Country name should contain only alphabets");
         }
     }
 
@@ -69,7 +69,7 @@ public class AddressInfo {
         if (String.valueOf(contactInfo).matches("\\d{11}")) {
             this.contactInfo = contactInfo;
         } else {
-            throw new IllegalArgumentException("Error: Contact info should be an 11-digit number");
+             throw new IllegalArgumentException("Error: Contact info should be an 11-digit number");
         }
     }
 }
