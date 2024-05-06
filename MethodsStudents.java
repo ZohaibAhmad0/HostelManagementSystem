@@ -124,14 +124,14 @@ public class MethodsStudents
                         System.out.println("Student CNIC: " + student.getCNIC());
                         System.out.println("Student Room Number: " + student.getRoomNo());
                         System.out.println("Address Information");
-                        System.out.println("Student Country: " + student.getAddressinfo().getCountry());
-                        System.out.println("Student City: " + student.getAddressinfo().getCity());
-                        System.out.println("Student Area: " + student.getAddressinfo().getArea());
-                        System.out.println("Student Street Number: " + student.getAddressinfo().getstreetNumber());
+                        System.out.println("Student Country: " + student.getAddressInfo().getCountry());
+                        System.out.println("Student City: " + student.getAddressInfo().getCity());
+                        System.out.println("Student Area: " + student.getAddressInfo().getArea());
+                        System.out.println("Student Street Number: " + student.getAddressInfo().getStreetNumber());
                         System.out.println("Contact Information");
-                        System.out.println("Student Country Code: " + student.getAddressinfo().getContactInfo().getCountryCode());
-                        System.out.println("Student LineNumber: " + student.getAddressinfo().getContactInfo().getLineNumber());
-                        System.out.println("Student Email: " + student.getAddressinfo().getContactInfo().getEmail());
+                        System.out.println("Student Country Code: " + student.getAddressInfo().getContactInfo().getCountryCode());
+                        System.out.println("Student LineNumber: " + student.getAddressInfo().getContactInfo().getLineNumber());
+                        System.out.println("Student Email: " + student.getAddressInfo().getContactInfo().getEmail());
                         System.out.println("Student Rent Status: " + student.getRentStatus());
                         break;
                     }
@@ -224,14 +224,14 @@ public class MethodsStudents
             System.out.println("Student CNIC: " + student.getCNIC());
             System.out.println("Student Room Number: " + student.getRoomNo());
             System.out.println("Address Information");
-            System.out.println("Student Country: " + student.getAddressinfo().getCountry());
-            System.out.println("Student City: " + student.getAddressinfo().getCity());
-            System.out.println("Student Area: " + student.getAddressinfo().getArea());
-            System.out.println("Student Street Number: " + student.getAddressinfo().getstreetNumber());
+            System.out.println("Student Country: " + student.getAddressInfo().getCountry());
+            System.out.println("Student City: " + student.getAddressInfo().getCity());
+            System.out.println("Student Area: " + student.getAddressInfo().getArea());
+            System.out.println("Student Street Number: " + student.getAddressInfo().getStreetNumber());
             System.out.println("Contact Information");
-            System.out.println("Student Country Code: " + student.getAddressinfo().getContactInfo().getCountryCode());
-            System.out.println("Student LineNumber: " + student.getAddressinfo().getContactInfo().getLineNumber());
-            System.out.println("Student Email: " + student.getAddressinfo().getContactInfo().getEmail());
+            System.out.println("Student Country Code: " + student.getAddressInfo().getContactInfo().getCountryCode());
+            System.out.println("Student LineNumber: " + student.getAddressInfo().getContactInfo().getLineNumber());
+            System.out.println("Student Email: " + student.getAddressInfo().getContactInfo().getEmail());
             System.out.println("Student Rent Status: " + student.getRentStatus());
             System.out.println();
         }
@@ -246,8 +246,8 @@ public class MethodsStudents
                  System.out.println("Student ID: " + student.getStudentID());
                  System.out.println("Name: " + student.getFirstName() + " " + student.getLastName());
                  System.out.println("Room Number: " + student.getRoomNo());
-                 System.out.println("Phone Number: " + student.getAddressinfo().getContactInfo().getCountryCode() + " " + student.getAddressinfo().getContactInfo().getLineNumber());
-                 System.out.println("Email: " + student.getAddressinfo().getContactInfo().getEmail());
+                 System.out.println("Phone Number: " + student.getAddressInfo().getContactInfo().getCountryCode() + " " + student.getAddressInfo().getContactInfo().getLineNumber());
+                 System.out.println("Email: " + student.getAddressInfo().getContactInfo().getEmail());
                  System.out.println("Room Type: " + student.getRoomType());
                  System.out.println("Rent Pending: " + student.getRentInfo().getRentPending());
                  System.out.println("Rent Paid: " + student.getRentInfo().getRentPaid());

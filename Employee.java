@@ -1,7 +1,7 @@
 public class Employee extends BasicCredentials
 
 {
-    private int employeeID = 0;
+    private Integer employeeID = 0;
     private EmployeePosition employeePosition;
     private PayStatus payStatus;
     private PayInfo payInfo = new PayInfo();
@@ -14,15 +14,21 @@ public class Employee extends BasicCredentials
         payInfo.setPayPending(employeePosition.getSalary());
     }
 
-    public int getEmployeeID()
-    {
+    public Integer getEmployeeID() {
         return employeeID;
     }
 
-    public void setEmployeeID(int employeeID)
-    {
+    public void setEmployeeID(Integer employeeID) {
+        if (employeeID == null) {
+            throw new IllegalArgumentException("Error: Employee ID cannot be null.");
+        }
+        // Validate employeeID is a positive number
+        if (employeeID <= 0) {
+            throw new IllegalArgumentException("Error: Employee ID must be a positive number.");
+        }
         this.employeeID = employeeID;
     }
+
 
     public EmployeePosition getEmployeePosition()
     {

@@ -90,7 +90,7 @@ public class MethodsExpense extends Expense
         System.out.println("Total Salary Expenses: " + totalExpenses );
         System.out.println("Total Custom Expenses: " + calCustomExpenses() );
         System.out.println("Overall Expenses: " + (totalExpenses + calCustomExpenses()) );
-        System.out.println("Salaries Paid: " + expnesesPaid );
+        System.out.println("Salaries Paid: " + expensesPaid );
         System.out.println("Salaries Pending: " + expensesPending );
     }
     public static void displayCustomExpenses()

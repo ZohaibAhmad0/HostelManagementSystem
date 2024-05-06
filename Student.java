@@ -1,12 +1,11 @@
-public class Student extends BasicCredentials
-{
-    private int studentID;
-    private int roomNo;
-    private RentInfo rentInfo = new RentInfo() ;
-    private RentStatus rentStatus ;
+public class Student extends BasicCredentials {
+    private Integer studentID;
+    private Integer roomNo;
+    private RentInfo rentInfo = new RentInfo();
+    private RentStatus rentStatus;
     private RoomType roomType;
-    public Student(String CNIC, String firstName, String lastName, AddressInfo address, int studentID, int roomNo, RoomType roomType)
-    {
+
+    public Student(String CNIC, String firstName, String lastName, AddressInfo address, Integer studentID, Integer roomNo, RoomType roomType) {
         super(CNIC, firstName, lastName, address);
         this.studentID = studentID;
         this.roomNo = roomNo;
@@ -15,129 +14,112 @@ public class Student extends BasicCredentials
         rentInfo.setRentPending(roomType.getRent());
     }
 
-    public RentInfo getRentInfo()
-    {
+    public RentInfo getRentInfo() {
         return rentInfo;
     }
 
-    public RoomType getRoomType()
-    {
+    public RoomType getRoomType() {
         return roomType;
     }
 
-    public void setRoomType(RoomType roomType)
-    {
+    public void setRoomType(RoomType roomType) {
         this.roomType = roomType;
     }
 
-    public RentStatus getRentStatus()
-    {
+    public RentStatus getRentStatus() {
         return rentStatus;
     }
 
-    public void setRentStatus(RentStatus rentStatus)
-    {
+    public void setRentStatus(RentStatus rentStatus) {
         this.rentStatus = rentStatus;
     }
 
-    private void setRentInfo(RentInfo rentInfo)
-    {
-        this.rentInfo=rentInfo;
+    private void setRentInfo(RentInfo rentInfo) {
+        this.rentInfo = rentInfo;
     }
 
-    public int getStudentID()
-    {
+    public Integer getStudentID() {
         return studentID;
     }
 
-    public void setStudentID(int studentID)
-    {
+    public void setStudentID(Integer studentID) {
+        // Validate studentID is not null and is a non-negative number
+        if (studentID == null || studentID < 0) {
+            throw new IllegalArgumentException("Error: StudentID must be a non-negative number.");
+        }
         this.studentID = studentID;
     }
 
-    public int getRoomNo()
-    {
+    public Integer getRoomNo() {
         return roomNo;
     }
 
-    public void setRoomNo(int roomNo)
-    {
+    public void setRoomNo(Integer roomNo) {
+        // Validate roomNo is not null and is a non-negative number
+        if (roomNo == null || roomNo < 0) {
+            throw new IllegalArgumentException("Error: RoomNo must be a non-negative number.");
+        }
         this.roomNo = roomNo;
     }
 
-    public void payRentOnline(double amount)
-    {
+    public void payRentOnline(double amount) {
         rentInfo.setRentPaid(rentInfo.getRentPaid() + amount);
         rentInfo.setRentPending(rentInfo.getRentPending() - amount);
         System.out.println("Rent paid successfully by online.");
-        if(rentInfo.getRentPending()== 0.0)
-        {
+        if (rentInfo.getRentPending() == 0.0) {
             this.rentStatus = RentStatus.paid;
         }
     }
 
-    public void payRentCash(double amount)
-    {
+    public void payRentCash(double amount) {
         rentInfo.setRentPaid(rentInfo.getRentPaid() + amount);
         rentInfo.setRentPending(rentInfo.getRentPending() - amount);
         System.out.println("Rent paid successfully by cash.");
-        if(rentInfo.getRentPending()== 0.0)
-        {
+        if (rentInfo.getRentPending() == 0.0) {
             this.rentStatus = RentStatus.paid;
         }
     }
 
-    public void updateRentInfo(double rentPaid, double rentPending)
-    {
+    public void updateRentInfo(double rentPaid, double rentPending) {
         rentInfo.setRentPaid(rentPaid);
         rentInfo.setRentPending(rentPending);
     }
 
-    public void displayRentInfo()
-    {
+    public void displayRentInfo() {
         System.out.println("Rent Paid: " + rentInfo.getRentPaid());
         System.out.println("Rent Pending: " + rentInfo.getRentPending());
     }
 
     public void checkRentStatus() {
-        if (rentStatus == RentStatus.paid)
-        {
+        if (rentStatus == RentStatus.paid) {
             System.out.println("No pending rent.");
-        }
-        else
-        {
+        } else {
             System.out.println("Pending rent: " + rentInfo.getRentPending());
         }
     }
 
-    public class RentInfo
-    {
+    public class RentInfo {
         private double rentPaid;
         private double rentPending;
 
-        public RentInfo()
-        {
+        public RentInfo() {
             this.rentPaid = 0.0;
             this.rentPending = 0.0;
         }
 
-        public double getRentPaid()
-        {
+        public double getRentPaid() {
             return rentPaid;
         }
 
-        public void setRentPaid(double rentPaid)
-        {
+        public void setRentPaid(double rentPaid) {
             this.rentPaid = rentPaid;
         }
 
-        public double getRentPending()
-        {
+        public double getRentPending() {
             return rentPending;
         }
 
-        public void setRentPending(double rentPending)
-        {
+        public void setRentPending(double rentPending) {
             this.rentPending = rentPending;
         }
     }
