@@ -1,0 +1,1 @@
+This academic project has been built together with my collaborators in which we built an application implementing the major java principles,SQL Database, and Javafx for the front-end of the application.
